@@ -37,7 +37,7 @@
             <tr class="bg-light">
               <th scope="row">统计</th>
               <td colspan="2">总价：{{ totalPrice }}</td>
-              <td colspan="2">均价：{{ jPrice }}</td>
+              <td colspan="2">均价：0</td>
             </tr>
           </tbody>
           <tfoot v-show="list.length === 0">
@@ -163,12 +163,6 @@ export default {
         total = total + item.price;
       });
       return total;
-    },
-    // 均价
-    // jPrice:function(){} 可简写为如下
-    jPrice() {
-      // 均价= 总价/数量
-      return this.totalPrice / this.list.length;
     },
   },
 };
